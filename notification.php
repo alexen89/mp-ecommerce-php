@@ -7,6 +7,7 @@
     $fp = fopen("notification.log","w");
     chmod("notification.log", 0777);
     fwrite($fp,$content);
+    fwrite($fp,$_GET['link']);
         fwrite($fp,$_POST['id']);
         fwrite($fp,$_POST['live_mode']);
         fwrite($fp,$_POST['type']);

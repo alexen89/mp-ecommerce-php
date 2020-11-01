@@ -43,7 +43,7 @@ $preference->back_urls = array(
 						'pending' => $baseUrl."/pending.php",
 						'failure' => $baseUrl."/failure.php"
 					);
-$preference->notification_url = "https://al3x3n.000webhostapp.com/mp-ecommerce-php/notification.php";
+$preference->notification_url = "https://al3x3n.000webhostapp.com/mp-ecommerce-php/notification.php?source_news=webhooks";
 $preference->auto_return = 'approved';
 $preference->save();
 

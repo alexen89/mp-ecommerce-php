@@ -55,6 +55,6 @@ $preference->save();
     <script src="https://www.mercadopago.com/v2/security.js" view=""></script>
   </head>
   <body>
-    <a href="<?php echo $preference->sandbox_init_point; ?>">Pagar la compra</a>
+    <a href="<?php echo $preference->init_point; ?>">Pagar la compra</a>
   </body>
 </html>

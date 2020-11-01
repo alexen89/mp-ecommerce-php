@@ -132,7 +132,7 @@
                                             <?php echo "$" . $_POST['unit'] ?>
                                         </h3>
                                     </div>
-                                    <form action="/detail.php" method="get">
+                                    <form action="/checkout.php" method="get">
                                         <input type="hidden" name="img" value="./assets/l6g6.jpg">
                                         <input type="hidden" name="title" value="<?php echo $_POST['title'] ?>">
                                         <input type="hidden" name="price" value="<?php echo $_POST['price'] ?>">

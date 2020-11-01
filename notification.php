@@ -3,14 +3,21 @@
  header("HTTP/1.1 200 OK");
  require __DIR__ .  '/vendor/autoload.php';
     MercadoPago\SDK::setAccessToken("APP_USR-1159009372558727-072921-8d0b9980c7494985a5abd19fbe921a3d-617633181");
-    $content = 'iniciamos';
+    $content = 'iniciamos\n';
     $fp = fopen("notification.log","w");
     chmod("notification.log", 0777);
     fwrite($fp,$content);
-    if (!empty($_POST)) {
-        fwrite($fp,$_POST);
-    }
-    fwrite($fp,'fin');
+        fwrite($fp,$_POST['id']);
+        fwrite($fp,$_POST['live_mode']);
+        fwrite($fp,$_POST['type']);
+        fwrite($fp,$_POST['date_created']);
+        fwrite($fp,$_POST['application_id']);
+        fwrite($fp,$_POST['user_id']);
+        fwrite($fp,$_POST['version']);
+        fwrite($fp,$_POST['api_version']);
+        fwrite($fp,$_POST['action']);
+        fwrite($fp,$_POST['data']['id']);
+    fwrite($fp,'fin\n');
     fclose($fp);
     switch(isset($_POST["type"])) {
         case "payment":

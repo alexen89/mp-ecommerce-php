@@ -14,7 +14,16 @@ $preference->items = array($item);
 $preference->save();
 
 ?>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pagar</title>
+  </head>
+  <body>
+    <a href="<?php echo $preference->init_point; ?>">Pagar con Mercado Pago</a>
+  </body>
+</html>
+
 <script
-  src="https://www.mercadopago.com.mx/integrations/v1/web-payment-checkout.js"
-  data-preference-id="<?php echo $preference->id; ?>">
+  src="https://www.mercadopago.com.mx/integrations/v1/web-payment-checkout.js">
 </script>

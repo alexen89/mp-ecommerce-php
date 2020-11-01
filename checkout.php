@@ -12,7 +12,7 @@ $item = new MercadoPago\Item();
 $item->id = 1234;
 $item->title = $_POST['price'];
 $item->description = "​Dispositivo móvil de Tienda e-commerce";
-$item->picture_url = $_POST['img'];
+$item->picture_url = url($_POST['img']);
 $item->quantity = $_POST['unit'];
 $item->unit_price = $_POST['price'];
 $preference->items = array($item);
@@ -20,13 +20,13 @@ $preference->items = array($item);
 $payer = new MercadoPago\Payer();
 $payer->name = 'Lalo';
 $payer->surname = 'Landa';
-$payer->email = 'test_user_58295862@testuser.com';
+$payer->email = 'test_user_81131286@testuser.com';
 $payer->phone  = array(
 				    "area_code" => "52",
 				    "number" => "5549737300"
 				  );
 $payer->address  = array(
-				    "zip_code" => "0394​ 0",
+				    "zip_code" => "0394​0",
 				    "street_name" => "Insurgentes Sur",
 				    "street_number" => "1602"
 				  );
@@ -55,6 +55,6 @@ $preference->save();
     <script src="https://www.mercadopago.com/v2/security.js" view=""></script>
   </head>
   <body>
-    <a href="<?php echo $preference->init_point; ?>">Pagar la compra</a>
+    <a href="<?php echo $preference->sandbox_init_point; ?>">Pagar la compra</a>
   </body>
 </html>

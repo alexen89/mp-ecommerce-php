@@ -9,7 +9,7 @@ $preference = new MercadoPago\Preference();
 
 // Crea un ítem en la preferencia
 $item = new MercadoPago\Item();
-$item->id 			= 1234;
+$item->id 			= '1234';
 $item->title 		= $_POST['title'];
 $item->description 	= "​Dispositivo móvil de Tienda e-commerce";
 $item->picture_url 	= $baseUrl.$_POST['img'];
@@ -22,12 +22,12 @@ $payer->name 	= 'Lalo';
 $payer->surname = 'Landa';
 $payer->email 	= 'test_user_81131286@testuser.com';
 $payer->phone  	= array(
-				    "area_code" => 52,
-				    "number" => 5549737300
+				    "area_code" => '52',
+				    "number" => '5549737300'
 				  );
 $payer->address = array(
 				    "street_name" 	=> "Insurgentes Sur",
-				    "street_number" => 1602,
+				    "street_number" => '1602',
 				    "zip_code" 		=> '03940'
 				  );
 

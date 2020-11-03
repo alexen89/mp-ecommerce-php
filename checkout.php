@@ -9,27 +9,28 @@ $preference = new MercadoPago\Preference();
 
 // Crea un ítem en la preferencia
 $item = new MercadoPago\Item();
-$item->id = 1234;
-$item->title = $_POST['price'];
-$item->description = "​Dispositivo móvil de Tienda e-commerce";
-$item->picture_url = $_POST['img'];
-$item->quantity = $_POST['unit'];
-$item->unit_price = $_POST['price'];
-$preference->items = array($item);
+$item->id 			= 1234;
+$item->title 		= $_POST['title'];
+$item->description 	= "​Dispositivo móvil de Tienda e-commerce";
+$item->picture_url 	= $baseUrl.'/assets/'.$_POST['img'];
+$item->quantity 	= $_POST['unit'];
+$item->unit_price 	= $_POST['price'];
+$preference->items 	= array($item);
 // Crea Payer  en la preferencia
 $payer = new MercadoPago\Payer();
-$payer->name = 'Lalo';
+$payer->name 	= 'Lalo';
 $payer->surname = 'Landa';
-$payer->email = 'test_user_81131286@testuser.com';
-$payer->phone  = array(
-				    "area_code" => "52",
-				    "number" => "5549737300"
+$payer->email 	= 'test_user_81131286@testuser.com';
+$payer->phone  	= array(
+				    "area_code" => 52,
+				    "number" => 5549737300
 				  );
-$payer->address  = array(
-				    "zip_code" => "0394​0",
-				    "street_name" => "Insurgentes Sur",
-				    "street_number" => "1602"
+$payer->address = array(
+				    "street_name" 	=> "Insurgentes Sur",
+				    "street_number" => 1602,
+				    "zip_code" 		=> 03940
 				  );
+
 $preference->payer = $payer;
 // Crea Payment Method en la preferencia
 $preference->payment_methods = array(

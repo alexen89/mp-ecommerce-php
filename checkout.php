@@ -48,9 +48,6 @@ $preference->notification_url = "https://al3x3n.000webhostapp.com/mp-ecommerce-p
 $preference->auto_return = 'approved';
 $preference->save();
 
-echo '<pre>';
-print_r($preference);
-echo '</pre>';
 ?>
 <!DOCTYPE html>
 <html>

@@ -11,7 +11,7 @@ $preference = new MercadoPago\Preference();
 $item = new MercadoPago\Item();
 $item->id 			= '1234';
 $item->title 		= $_POST['title'];
-$item->description 	= '"​Dispositivo móvil de Tienda e-commerce"';
+$item->description 	= '"Dispositivo móvil de Tienda e-commerce';
 $item->picture_url 	= $baseUrl.$_POST['imagen'];
 $item->quantity 	= $_POST['unit'];
 $item->unit_price 	= $_POST['price'];
@@ -48,6 +48,9 @@ $preference->notification_url = "https://al3x3n.000webhostapp.com/mp-ecommerce-p
 $preference->auto_return = 'approved';
 $preference->save();
 
+echo '<pre>';
+print_r($preference);
+echo '</pre>';
 ?>
 <!DOCTYPE html>
 <html>

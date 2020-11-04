@@ -1,7 +1,7 @@
 <?php
 // SDK
 require __DIR__ .  '/vendor/autoload.php';
-$baseUrl = $_SERVER['SERVER_NAME'];
+$baseUrl = $_SERVER['SERVER_ADDR'];
 //credentiales
 MercadoPago\SDK::setAccessToken('APP_USR-1159009372558727-072921-8d0b9980c7494985a5abd19fbe921a3d-617633181');
 MercadoPago\SDK::setIntegratorId("dev_24c65fb163bf11ea96500242ac130004");
@@ -11,7 +11,7 @@ $preference = new MercadoPago\Preference();
 $item = new MercadoPago\Item();
 $item->id 			= '1234';
 $item->title 		= $_POST['title'];
-$item->description 	= '"Dispositivo móvil de Tienda e-commerce';
+$item->description 	= 'Dispositivo móvil de Tienda e-commerce';
 $item->picture_url 	= $baseUrl.$_POST['imagen'];
 $item->quantity 	= $_POST['unit'];
 $item->unit_price 	= $_POST['price'];
